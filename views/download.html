@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Torrent Downloader</title>
+<style>
+body { 
+  background: #fcfcfc !important;
+}
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height:50%;  
+  border-radius: 3px;
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+}
+footer {
+    width: 100%;
+    bottom: 0;
+	left:0;
+    position: fixed;
+	font-size: 75%;
+}
+</style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="center-div">
+<h2>Enter the Magnet URL and press download</h2>
+  <form id="torform" name="torform" method="post" action="/torrent">    
+    <label for="textfield"><span class="label label-warning">Torrent:</span>Enter Magnet Link:</label>
+    <input name="textfield" title="The magnet URL from your favourite torrent site" type="text" autofocus required placeholder="magnet:?xt=urn:btih:556BE0BD40C4880E29BA567663C65BD8BAE9FBEB"
+    pattern="magnet\:\?xt\=.*?" size="40"
+    >
+    <input type="submit" name="submit" id="submit" value="Download!" class="btn btn-primary">
+  </form>
+</div>
+<footer>Uses <a href="https://webtorrent.io/">WebTorrents</a> by <a href="http://feross.org/">feross</a>. This is still in <span class="label label-danger">alpha</span>, expect dragons.</footer>
+</body>
+</html>
+
