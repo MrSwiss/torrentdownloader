@@ -29,12 +29,68 @@ footer {
     position: fixed;
 	font-size: 75%;
 }
+#fossribbon {
+  z-index:10;
+}
+#fossribbon a{
+  background:red;
+  color:#fff;
+  text-decoration:none;
+  font-family:arial, sans-serif;
+  text-align:center;
+  font-weight:bold;
+  padding:5px 40px;
+  font-size:1rem;
+  line-height:2rem;
+  position:relative;
+  transition:0.5s;
+}
+#fossribbon a:hover{
+  background:black;
+  color:#fff;
+}
+#fossribbon a::before,#fossribbon a::after{
+  content:"";
+  width:100%;
+  display:block;
+  position:absolute;
+  top:1px;
+  left:0;
+  height:1px;
+  background:#fff;
+}
+#fossribbon a::after{
+  bottom:1px;top:auto;
+}
+@media screen and (min-width:800px){
+  #fossribbon{
+    position:absolute;
+    display:block;
+    top:0;
+    right:0;
+    width:200px;
+    overflow:hidden;
+    height:200px;
+  }
+  #fossribbon a{
+    width:200px;
+    position:absolute;
+    top:60px;
+    right:-60px;
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+  }
+}
 </style>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 </head>
 
 <body>
+<span id="fossribbon">
+    <a href="https://openshift.redhat.com/app/console/application_types/custom?name=torrentdloader&initial_git_url=https%3A%2F%2Fgithub.com/bitanath/torrentdownloader.git&cartridges[]=nodejs-0.10">Run on OpenShift</a>
+</span>
 <div class="center-div">
 <h2>Enter the Magnet URL and press download</h2>
   <form id="torform" name="torform" method="post" action="/torrent">    
