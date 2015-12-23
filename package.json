@@ -4,8 +4,7 @@
   "description": "A project to download torrents straight to browser",  
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3",
-    //"webtorrent": "^0.62.3",
+    "express": "^4.13.3",    
     "mime": "^1.3.4",
     "pump": "^1.0.1"    
   },  
