@@ -28,8 +28,7 @@
   "bugs": {
     "url": "https://github.com/bitanath/torrentdownloader/issues"
   },
-  "homepage": "https://github.com/bitanath/torrentdownloader#readme",
-  ,
+  "homepage": "https://github.com/bitanath/torrentdownloader#readme",  
   "scripts": {
      "start": "node server.js"
   },
