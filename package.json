@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/bitanath/torrentdownloader#readme",  
   "engines": {
-  "node": ">= 0.12.0",
+  "node": ">= 0.12.7",
   "npm": ">= 3.3.12"
   },
   "scripts": {
