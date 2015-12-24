@@ -1,4 +1,4 @@
-//var WebTorrent = require('webtorrent');
+var WebTorrent = require('webtorrent');
 var mime = require('mime');
 var pump = require('pump');
 

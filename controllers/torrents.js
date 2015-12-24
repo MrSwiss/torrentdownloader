@@ -1,7 +1,7 @@
 
 var http = require('http');
 var express = require('express');
-//var WebTorrent = require('webtorrent');
+var WebTorrent = require('webtorrent');
 
 exports.getTorrentList = function(req,res){
         console.log('Posted to torrent');
