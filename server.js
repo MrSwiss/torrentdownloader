@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 var torrentController = require('./controllers/torrents.js');
 var dloadController = require('./controllers/download.js');
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.port || 8080;
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || process.env.port || 3002;
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'; 
 
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3002);
@@ -38,8 +38,6 @@ app.get('/download',function(req,res){
 app.post('/torrent',torrentController.getTorrentList);
 //TODO download torrent streams in this method
 app.get('/torrent/:magnet/:index',dloadController.getDownloadLinks);
-//app.listen(server_port,server_ip_address,function(){ console.log("Listening on "+server_port); });
-http.createServer(app).listen(app.get('port') ,app.get('ip'), function () {
-    console.log("✔ Express server listening at %s:%d ", app.get('ip'),app.get('port'));
- });
+app.listen(server_port,server_ip_address,function(){ console.log("Listening on "+server_port); });
+
 
